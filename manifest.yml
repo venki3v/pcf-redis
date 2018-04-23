@@ -1,0 +1,8 @@
+spring.application.name: ici-service-redispoc
+
+applications:
+- name: ici-service-redispoc
+  memory: 1024M
+  instances: 1
+  random-route: true
+  path: target/redispoc-0.0.1.jar
