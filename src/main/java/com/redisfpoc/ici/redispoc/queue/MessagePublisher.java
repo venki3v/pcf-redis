@@ -1,4 +1,4 @@
-package com.ford.ici.redispoc.queue;
+package com.redisfpoc.ici.redispoc.queue;
 
 public interface MessagePublisher {
 

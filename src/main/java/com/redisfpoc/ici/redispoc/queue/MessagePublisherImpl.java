@@ -1,5 +1,6 @@
-package com.ford.ici.redispoc.queue;
+package com.redisfpoc.ici.redispoc.queue;
 
+import com.redisfpoc.ici.redispoc.model.CustomerJourney;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.ChannelTopic;
@@ -9,14 +10,12 @@ import org.springframework.stereotype.Service;
 public class MessagePublisherImpl implements MessagePublisher {
     
     @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
+    private RedisTemplate<String, CustomerJourney> redisTemplate;
     @Autowired
     private ChannelTopic topic;
 
-    public MessagePublisherImpl() {
-    }
 
-    public MessagePublisherImpl(final RedisTemplate<String, Object> redisTemplate, final ChannelTopic topic) {
+    public MessagePublisherImpl(final RedisTemplate<String, CustomerJourney> redisTemplate, final ChannelTopic topic) {
         this.redisTemplate = redisTemplate;
         this.topic = topic;
     }

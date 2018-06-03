@@ -1,4 +1,4 @@
-package com.ford.ici.redispoc.model;
+package com.redisfpoc.ici.redispoc.model;
 
 import java.io.Serializable;
 
@@ -30,7 +30,7 @@ public class CustomerJourney implements Serializable {
     
     @Override
     public String toString(){
-        return "Movie{" + "Customer id=" +id + '\''  + ", Customer value =" + value + "}";
+        return "CustomerJourney{" + "Customer id=" +id + '\''  + ", Customer value =" + value + "}";
     }
 
 }

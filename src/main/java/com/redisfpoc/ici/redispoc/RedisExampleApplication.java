@@ -1,4 +1,4 @@
-package com.ford.ici.redispoc;
+package com.redisfpoc.ici.redispoc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

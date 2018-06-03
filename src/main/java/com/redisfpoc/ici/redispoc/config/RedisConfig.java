@@ -1,5 +1,6 @@
-package com.ford.ici.redispoc.config;
+package com.redisfpoc.ici.redispoc.config;
 
+import com.redisfpoc.ici.redispoc.model.CustomerJourney;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -10,24 +11,24 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.GenericToStringSerializer;
 
-import com.ford.ici.redispoc.queue.MessagePublisher;
-import com.ford.ici.redispoc.queue.MessagePublisherImpl;
-import com.ford.ici.redispoc.queue.MessageSubscriber;
+import com.redisfpoc.ici.redispoc.queue.MessagePublisher;
+import com.redisfpoc.ici.redispoc.queue.MessagePublisherImpl;
+import com.redisfpoc.ici.redispoc.queue.MessageSubscriber;
 
 @Configuration
-@ComponentScan("com.ford.ici.redispoc")
+@ComponentScan("com.redisfpoc.ici.redispoc")
 public class RedisConfig {
 
     @Bean
-    JedisConnectionFactory jedisConnectionFactory() {
+    public JedisConnectionFactory jedisConnectionFactory() {
         return new JedisConnectionFactory();
     }
 
     @Bean
-    public RedisTemplate<String, Object> redisTemplate() {
-        final RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
+    public RedisTemplate<String, CustomerJourney> redisTemplate() {
+        final RedisTemplate<String, CustomerJourney> template = new RedisTemplate<>();
         template.setConnectionFactory(jedisConnectionFactory());
-        template.setValueSerializer(new GenericToStringSerializer<Object>(Object.class));
+        //template.setValueSerializer(new GenericToStringSerializer<CustomerJourney>(CustomerJourney.class));
         return template;
     }
 

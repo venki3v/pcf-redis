@@ -1,4 +1,4 @@
-package com.ford.ici.redispoc.queue;
+package com.redisfpoc.ici.redispoc.queue;
 
 import java.util.ArrayList;
 import java.util.List;
