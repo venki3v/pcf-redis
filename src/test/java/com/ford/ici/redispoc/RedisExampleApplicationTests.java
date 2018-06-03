@@ -1,4 +1,4 @@
-package com.ford.ici.redispoc;
+package com.redisfpoc.ici.redispoc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
