@@ -1,5 +1,5 @@
-This sample can be used to connect to redis in a PCf environment using Auto discover process
-Uses Spring Redis library to push data in to redis cache
+This sample can be used to connect to redis in a PCf environment using Auto discovery
+This spring boot applicaiton Uses Spring Redis library to push data in to redis cache
 uses Spring data list operations to insert data into cache
 This stores customer history as a list in a customer key
 
